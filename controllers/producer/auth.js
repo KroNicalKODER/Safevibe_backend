@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 import Companion from "../../models/Companion.js";
 import Guard from "../../models/Guard.js";
 import Producer from "../../models/Producer.js";

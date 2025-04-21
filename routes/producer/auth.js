@@ -3,8 +3,8 @@ import { registerCompanion, registerGuard, loginCompanion, loginGuard, registerP
 
 const router = express.Router();
 
-router.post("/register/producer", registerProducer)
-router.post("/login/producer", loginProducer)
+router.post("/register", registerProducer)
+router.post("/login", loginProducer)
 
 router.post("/register/companion", registerCompanion)
 router.post("/login/companion", loginCompanion)

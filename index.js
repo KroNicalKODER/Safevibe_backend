@@ -4,11 +4,12 @@ import mongoose from "mongoose";
 import cors from "cors";
 
 import producerAuthRoutes from "./routes/producer/auth.js";
-
+import consumerAuthRoutes from "./routes/consumer/auth.js";
 dotenv.config();
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 const PORT = 8000;
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/producer", producerAuthRoutes);
+app.use("/api/consumer", consumerAuthRoutes);
 
 app.use((err,req,res,next)=>{
   const status = err.status || 500
