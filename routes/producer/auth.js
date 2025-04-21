@@ -1,5 +1,5 @@
 import express from "express";
-import { registerCompanion, registerGuard, loginCompanion, loginGuard } from "../../controllers/producer/auth.js";
+import { registerCompanion, registerGuard, loginCompanion, loginGuard, registerProducer, loginProducer } from "../../controllers/producer/auth.js";
 
 const router = express.Router();
 
